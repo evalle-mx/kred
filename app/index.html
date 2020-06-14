@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Kred financial">
+  <meta name="author" content="kobe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Kred Online</title>
+	<link rel="Shortcut Icon" type="image/x-icon" href="favicon.ico">
+	<!--  Vendor Styles -->	
+	<link rel="stylesheet" type="text/css" href="/s3/common/framework/bootstrap-3.3.5-dist/css/bootstrap.css"> 
+	<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<!-- Estilos Propietarios -->
+	<link rel="stylesheet" type="text/css" href="/s3/dothr/resources/css/icons.css" />
+
+	<link rel="stylesheet" type="text/css" href="/s3/common/resources/css/kredcommon.css">
+
+    <style type="text/css">
+		
+	</style>
+</head>
+
+<body data-ng-app="dotHrApp" class="ng-cloak" ng-controller="mainController">
+
+	<header class="kred-top-menu">
+		<div class="navbar navbar-inverse navbar-static-top" role="navigation" ng-controller="navigation">
+		  	<nav>	
+		  		<span dothrheader></span>
+			</nav>
+		</div>
+	</header>
+
+	<!-- +++++++++++++ MAIN CONTAINER  +++++++++++++++++++  -->
+   <div class="container" ng-view></div>
+
+	<!--  ++++  COMMON MODALS  +++++   -->
+	<modal-failure></modal-failure>
+
+
+	<div class="modal fade" id="mdLogout" role="dialog" data-backdrop="static"  ng-controller="navigation">
+	    <div class="modal-dialog modal-sm">
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-body">
+				<div class="alert alert-danger alert-dismissible fade in" role="alert"> 
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button> 
+					<h4>Are you sure to exit?</h4>
+					<p>This will end your activity and close your session.</p> 
+					<p> <button type="button" class="btn btn-danger" ng-click="logout()">Take me out</button> 
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button> 
+					</p> 
+				</div>
+	        </div>
+	      </div>      
+	    </div>
+	</div> <!-- end-Modal -->
+
+
+
+	<!-- FOOTER-->
+	<footer>
+		<span commfooter></span>
+	</footer>
+</body>
+
+           <!-- REST SIMMULATE TOOL -->
+			<script src="script/dummyServices.js" type="text/javascript"></script>
+<!-- JAVASCRIPT -->
+<!-- Vendor: Google (Maps, jQuery, jQueryUI, Webfont, Angular) -->
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAAkAPQLC_zbY5BD9gBe96DbySC_ttTE4o&sensor=false&libraries=geometry&region=MX&language=es"></script>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>  -->
+<script src="/s3/common/framework/jquery.2.1.3/js/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+<script src="/s3/common/framework/jquery-ui.1.10.4/jquery-ui.js"></script>
+
+<!-- Vendor: Angular -->
+<script src="/s3/common/framework/angular.1.3.8/js/angular.js" type="text/javascript"></script>
+<script src="/s3/common/framework/angular.1.3.8/js/angular-route.js" type="text/javascript"></script>
+<script src="/s3/common/framework/angular.1.3.8/js/angular-resource.js" type="text/javascript"></script>
+<script src="/s3/common/framework/angular.1.3.8/js/ng-file-upload.min.js"></script>
+<script src="/s3/common/framework/angular.1.3.8/js/ng-file-upload-shim.min.js"></script>
+<script src="/s3/common/framework/angular.1.3.8/js/angular-animate.js"></script>
+<script src="/s3/common/framework/angular.1.3.8/js/ui-bootstrap-tpls-0.14.3.js"></script>
+
+<script src="/s3/common/framework/angular.1.3.8/js/angular-messages.js"></script>
+<!-- Map Angular -->
+<script src="/s3/common/framework/angular.1.3.8/js/lodash.underscore.min.js?v=2.4.1"></script>
+<script src="/s3/common/framework/angular.1.3.8/js/angular-google-maps.min.js?v=1.2.2"></script>
+
+<!-- Vendor:  Bootstrap -->
+<script src="/s3/common/framework/bootstrap-3.3.5-dist/js/bootstrap/bootstrap-affix.js"></script>
+<script src="/s3/common/framework/bootstrap-3.3.5-dist/js/bootstrap/bootstrap-alert.js"></script>
+<script src="/s3/common/framework/bootstrap-3.3.5-dist/js/bootstrap/bootstrap-dropdown.js"></script>
+<script src="/s3/common/framework/bootstrap-3.3.5-dist/js/bootstrap/bootstrap-tooltip.js"></script>
+<script src="/s3/common/framework/bootstrap-3.3.5-dist/js/bootstrap/bootstrap-modal.js"></script>
+<script src="/s3/common/framework/bootstrap-3.3.5-dist/js/bootstrap/bootstrap-transition.js"></script>
+<script src="/s3/common/framework/bootstrap-3.3.5-dist/js/bootstrap/bootstrap-button.js"></script>
+<script src="/s3/common/framework/bootstrap-3.3.5-dist/js/bootstrap/bootstrap-popover.js"></script>
+<script src="/s3/common/framework/bootstrap-3.3.5-dist/js/bootstrap/bootstrap-typeahead.js"></script>
+<script src="/s3/common/framework/bootstrap-3.3.5-dist/js/bootstrap/bootstrap-carousel.js"></script>
+<script src="/s3/common/framework/bootstrap-3.3.5-dist/js/bootstrap/bootstrap-scrollspy.js"></script>
+<script src="/s3/common/framework/bootstrap-3.3.5-dist/js/bootstrap/bootstrap-collapse.js"></script>
+<script src="/s3/common/framework/bootstrap-3.3.5-dist/js/bootstrap/bootstrap-tab.js"></script>
+
+	<script src="scripts/common/utils.dothr.js"></script>
+	<script src="scripts/app.js"></script>
+	
+	<script src="scripts/controllers/dothrController.js"></script>
+	<script src="scripts/controllers/navigate.js"></script>
+	<script src="scripts/controllers/kredContrls.js"></script>
+
+
+	<script src="scripts/services/dothrServices.js"></script>
+	<script src="scripts/filters/dothrFilters.js"></script>
+	<script src="scripts/directives/sections.js"></script>
+	<script src="scripts/directives/forms.js"></script>
+	
+
+  <script type="text/javascript">
+        	google.load("visualization", "1", {packages:["corechart"]});
+   </script>
+</html>

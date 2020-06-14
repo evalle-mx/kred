@@ -1,0 +1,190 @@
+    <!-- https://mdbootstrap.com/docs/jquery/javascript/charts/#bar-chart -->
+    <div class="kred-page" ng-controller="cashFlowCtrl" >
+
+        <script type="text/javascript" src="scripts/common/popper.min.js"></script>
+        <script type="text/javascript" src="scripts/common/mdb.min.js"></script>
+        <hr>
+        <div class="kred-rutaheader">
+            <b>You are in:</b>&nbsp;<a href="">My Cash Flow</a>
+        </div>
+    
+        <!-- ############################    LATERAL MENU   ###########################  -->
+    <div class="kred-menulateral">
+        <!-- Panel Lateral Flotante -->
+        <div class="panel panel-default kred-sidepanel" >
+            <div class="panel-body">            	
+                <div class="kred-panel dhr-border" >
+                  <div class="kred-panel-heading"> 
+                    <span class="dhrIcon-info2"></span>&nbsp;Tips</div>
+                  <div class="panel-body infoPanelBody">
+                        <i class="glyphicon glyphicon-hand-right"></i> Verify that "Shift" mode is not activated on the keyboard.<br>
+                        <br><i class="glyphicon glyphicon-hand-right"></i> Use a password consisting of a combination of letters, numbers, and symbols, in lowercase and uppercase.<br>
+                        <br><i class="glyphicon glyphicon-hand-right"></i> It must be an easy password to remember but not a word related to family or everyday life<br>
+                        <br><i class="glyphicon glyphicon-hand-right"></i> You can insert keyboard signs between characters, such as: <b>#</b>, <b>$</b>, <b>&</b> o <b>%</b>.
+                  </div>
+                </div>
+                
+            </div> <!-- Panel-Body  Menu -->
+        </div>  <!-- Panel  Menu-->
+    </div><!--  //End LATERAL -->
+    
+        <!-- ############################   MAIN CONTENT   ###########################  -->
+        <div class="kred-cprincipal">            
+    
+            <!-- %%%%%%%%  RENGLON UNO %%%%%%%% -->
+            
+            
+            <div class="row">
+                
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#proceso" aria-controls="profile" role="tab" data-toggle="tab">Graphic</a></li>
+                    <li role="presentation"><a href="#transact" aria-controls="transact" role="tab" data-toggle="tab">Transactions</a></li>
+                    <li role="presentation"><a href="#mexpenses" aria-controls="messages" role="tab" data-toggle="tab">Monthly expenses</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="proceso">
+                        <form id="procForm" novalidate>
+                           
+                            <fieldset>
+                                <div ng-show="true" >
+
+                                    <div class="col-md-2">
+                                        <div class="panel panel-default" >
+                                            <div class="panel-heading">
+                                                <b>Expenses </b>
+                                            </div>
+                                            <div class="panel-body " >
+                                                <table class="table">
+                                                    <tr>
+                                                        <td><b>Utilies</b></td>
+                                                        <td>
+                                                            <button class="btn btn-xs" style="background-color:#35EAE7;" >&nbsp;</button> 
+                                                            {{metricas.utilies}} %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>Clothing</b></td>
+                                                        <td>
+                                                            <button class="btn btn-xs" style="background-color: #FFDD33;" >&nbsp;</button> 
+                                                            {{metricas.clothing}} %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>Travel</b></td>
+                                                        <td>
+                                                            <button class="btn btn-xs" style="background-color: #F7464A;" >&nbsp;</button> 
+                                                            {{metricas.travel}} %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>Groceries</b></td>
+                                                        <td>
+                                                            <button class="btn btn-xs" style="background-color: #949FB1;" >&nbsp;</button> 
+                                                            {{metricas.groceries}} %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>Services</b></td>
+                                                        <td>
+                                                            <button class="btn btn-xs" style="background-color: #3587EA;" >&nbsp;</button> 
+                                                            {{metricas.services}} %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>Business</b></td>
+                                                        <td>
+                                                            <button class="btn btn-xs" style="background-color: #48CD42;" >&nbsp;</button> 
+                                                            {{metricas.business}} %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>Automotive</b></td>
+                                                        <td>
+                                                            <button class="btn btn-xs" style="background-color: #EA6C35;" >&nbsp;</button> 
+                                                            {{metricas.automotive}} %</td>
+                                                    </tr>
+                                                        
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="panel panel-default" >
+                                            <div class="panel-body " >
+                                                <canvas id="pieChart" style="max-width: 500px;"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+
+
+                    <div role="tabpanel" class="tab-pane" id="transact">
+                            <form id="genForm" novalidate>
+                               
+                                <fieldset>
+                                    <div ng-show="true" >
+                                        <table class="table table-hover" style="width: 60%;">
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Account</th>
+                                                <th>Description</th>
+                                                <th>Category</th>
+                                                <th>Amount</th>
+                                            </tr>
+
+                                            <tr ng-repeat="trans in transactions">
+                                                <td>{{trans.date}}</td>
+                                                <td>{{trans.account}}</td>
+                                                
+                                                <td>{{trans.description}}</td>
+                                                <td>{{trans.category}}</td>
+                                                
+                                                <td>{{trans.amount | currency}}</td>
+                                            </tr>
+                                            <tr> 
+                                                <td colspan="2">
+                                                    <b>Grand total: </b>
+                                                </td>
+                                                <td colspan="2"></td>
+                                                <td> <b>{{totalTransactions | currency}}</b></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </fieldset>
+                            </form>                       
+                    </div>
+
+
+                    <div role="tabpanel" class="tab-pane" id="mexpenses">
+                        <form id="procForm" novalidate>
+                           
+                            <fieldset>
+                                <div ng-show="true" >
+                                    <div class="col-md-12">
+                                        <div class="panel panel-default" >
+                                            <div class="panel-body " >
+                                                <canvas id="barChart" style="max-width: 500px;"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                
+                
+            </div>
+    
+    
+           <br>
+    
+        </div> <!-- //End kred-cprincipal -->
+    
+       
+        <!-- ############################   MODALES   ###########################  -->
+
+        
+    
+        
+    </div><!-- FIN DE PAGE -->
+    

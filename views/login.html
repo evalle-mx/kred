@@ -1,0 +1,36 @@
+<div ng-controller="navigation" class="kred-login">
+	<br>
+	<h2> Type your credentials to access our application. </h2>
+	<div class="alert alert-danger dhr-home" ng-show="prb">
+		Some problem exist:<b>{{prb}}</span></b>
+	</div>
+	 <div class="alert alert-success dhr-home" ng-show="showsuccess">
+			<h2>{{ message }}</h2>
+		</div>
+		<div class="alert alert-danger dhr-home" ng-show="showerror">
+			<h2>{{ message }}</h2>
+		</div>
+		<div class="alert alert-warning dhr-home" ng-show="showwarning">
+			<h2>{{ message }}</h2>
+		</div>
+	<form role="form" ng-submit="login()" class="well dhr-home" name="forma_contacto">
+		<div class="form-group">
+			<label for="username">Username:</label> 
+			<input type="text"
+				class="form-control" id="username" name="username" placeholder="email@domain.com" ng-model="credentials.username"/>
+		</div>
+		<div class="form-group">
+			<label for="password">Password:</label>
+			 <input type="password" 
+				class="form-control" id="password" name="password" placeholder="Please type your password" ng-model="credentials.password"/>
+		</div>
+
+		<button type="submit" ng-hide="showIEbutton" class="btn btn-primary" id="btie">Enter</button> 
+		       
+	    <button type="button" class="btn btn-primary" onClick="location.href='#anyword'"
+	     data-toggle="modal" data-target="#myModal" id="btnoie" ng-show="showIEbutton">Enter</button>
+	     
+	     <span>&nbsp;<a href="#/recupera" data-toggle="popover" data-trigger="hover" data-content="Enter here to regain your access">Forgot your password</a>?</span>
+	</form>
+	
+</div>

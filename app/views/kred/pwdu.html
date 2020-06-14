@@ -1,0 +1,99 @@
+<div class="kred-page" ng-controller="navigation">
+    <style type="text/css">
+    </style>
+    <hr>
+    <div class="kred-rutaheader">
+        <b>You are in:</b>&nbsp;&nbsp;Account > <a href="#/vccn"> <span>Password Managemt</span></a>
+    </div>
+
+    <!-- ############################   MENU LATERAL   ###########################  -->
+    <div class="kred-menulateral">
+        <!-- Panel Lateral Flotante -->
+        <div class="panel panel-default kred-sidepanel" >
+            <!-- div class="panel-heading">
+                <b>Titulo del panel</b> 
+            </div>-->
+            <div class="panel-body">            	
+                <div class="kred-panel dhr-border" >
+                  <div class="kred-panel-heading"> 
+                    <span class="dhrIcon-info2"></span>&nbsp;Tips</div>
+                  <div class="panel-body infoPanelBody">
+                        <i class="glyphicon glyphicon-hand-right"></i> Verify that "Shift" mode is not activated on the keyboard.<br>
+                        <br><i class="glyphicon glyphicon-hand-right"></i> Use a password consisting of a combination of letters, numbers, and symbols, in lowercase and uppercase.<br>
+                        <br><i class="glyphicon glyphicon-hand-right"></i> It must be an easy password to remember but not a word related to family or everyday life<br>
+                        <br><i class="glyphicon glyphicon-hand-right"></i> You can insert keyboard signs between characters, such as: <b>#</b>, <b>$</b>, <b>&</b> o <b>%</b>.
+                  </div>
+                </div>
+                
+            </div> <!-- Panel-Body de Menu (flotante) -->
+        </div>  <!-- Panel de Menu (flotante) -->
+    </div><!--  //End MENU LATERAL -->
+
+
+    <!-- ############################   CONTENIDO PRINCIPAL   ###########################  -->
+    <div class="kred-cprincipal">
+
+        <!--  *******************   SECCION FORMULARIO CONTRASEÑA  **************    -->
+        <section id="sec-pwd">
+            <div class="row kred-divform">
+				<div class="dfheader">
+                    <span class="dhrIcon-key titleIcon"></span>&nbsp;&nbsp;Password update
+                </div>
+                <div class="dfbody" >
+                    <div class="alert alert-danger text-center" role="alert" ng-show="errorPwd">
+                        Check input parameters:  <b>{{errorPwd}} </b>
+                        
+                    </div>
+                    <table>
+                        <tr>
+                            <td><label for="pwdant">Actual</label>  &nbsp;</td>
+                            <td><input type="password" id="pwdant" class="big" placeholder="Actual" ng-model="pwdant" />
+                                <span class="kred-danger" ng-show="errorPwd">&nbsp;*</span></td>
+                        </tr>
+                        <tr>
+                            <td><label for="pwdupd1" >Enter your New Password</label>  &nbsp;</td>
+                            <td><input type="password" id="pwdupd1" class="big" placeholder="Password" ng-model="pwdupd1" />
+                                <span class="kred-danger" ng-show="errorPwd">&nbsp;*</span>
+                                &nbsp;<span class="" style="font-size:0.7em;">&nbsp;8 characters minimum, case sensitive</span></td>
+                        </tr>
+                        <tr>
+                            <td><label for="pwdupd2" >Retype new password</label> &nbsp;</td>
+                            <td><input type="password" id="pwdupd2" class="big" placeholder="Repeat password to confirm" ng-model="pwdupd2" />
+                                <span class="kred-danger" ng-show="errorPwd">&nbsp;*</span>
+                                &nbsp;<span class="" style="font-size:0.7em;">&nbsp;8 characters minimum, case sensitive</span></td>
+                        </tr>
+                    </table>
+                    <div style="text-align:center">
+                         <button type="button" class="btn btn-success " ng-click="updatePwd();">
+                            <i class="dhrIcon-arrow-right2"></i> Update
+                          </button>
+                          <br><span class="kred-danger" id="msgPwdErr"></span>
+                    </div>
+                    <p class="kred-tablesmall">
+                        <br><br>
+                        <span>*Remember to log out if you are on a public network such as an Internet cafe or a shared computer.</span>
+                        <br>
+                        <span style="font-size: 0.8em;">* We are using sha256 encryption.</span>
+                    </p>
+                    
+                </div>
+            </div>
+
+
+
+           
+        </section>
+        
+        
+
+    </div> <!-- //End dhr-cprincipal -->
+
+   
+    <!-- ############################   MODALES   ###########################  -->
+
+   
+	
+</div><!-- FIN DE PAGE -->
+
+<script src="../resources/sha256.js"></script>
+<script src="../resources/enc-base64-min.js"></script>

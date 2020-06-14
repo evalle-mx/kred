@@ -1,0 +1,51 @@
+{
+	"idUser": "7",
+	"email": "user1@kred.ca",
+	"idEmpresa": "1",
+	"idEstatus": "3",
+	"creationDate": "2019-11-06 14:15:00.295",
+	"name": "Big Boss",
+	"middleName:": "",
+	"lastName": "Aldebaran",
+	"age": "38",
+	"idTipoGenero": "1",
+	"idCompany": "987",
+	"companyName": "Bank of Montreal",
+	"imgProf": "/s3/common/img/avatar/generic.png",
+	"contact": [{
+			"idContact": "10",
+			"idContactType": "12",
+			"contactText": "28503734"
+		},
+		{
+			"idContact": "11",
+			"idContactType": "10",
+			"contactText": "boss-skype"
+		}
+	],
+	"documents": [{
+			"idDoc": "10",
+			"typeDoc":"pdf",
+			"url": "https://www.google.com.mx/",
+			"description": "Monthly April report"
+		},
+		{
+			"idDoc": "15",
+			"typeDoc":"xls",
+			"url": "https://jsonlint.com/",
+			"description": "Stadistics sales"
+		},
+		{
+			"idDoc": "17",
+			"typeDoc":"doc",
+			"url": "https://jsonlint.com/",
+			"description": "Motivation letter"
+		},
+		{
+			"idDoc": "21",
+			"typeDoc":"ppt",
+			"url": "https://jsonlint.com/",
+			"description": "Centennial template"
+		}
+	]
+}

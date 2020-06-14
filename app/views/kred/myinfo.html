@@ -1,0 +1,127 @@
+<div class="kred-page"  ng-controller="myInfoCtrl">
+    <style type="text/css">
+        
+    </style>
+	<hr>
+	<div class="kred-rutaheader">
+    <b>You are in:</b>&nbsp;&nbsp;Account > <a href="">My Profile Information</a>
+  </div>
+	<!-- ############################   CONTENIDO PRINCIPAL   ###########################  -->
+	
+	<section >
+            <!-- <div class="row" style="padding-bottom:30px;">
+                <div class="col-md-12 text-center">
+				<h2>Six Types Of Bootstrap Panels</h2>
+                </div>
+            </div>
+             <!-- ROW END -->
+
+             <!-- ########  RENGLON UNO ######## -->
+             <div class="row">
+                <!-- Panel de Descripcion General -->
+                <div class="col-md-6">
+                    <div class="panel panel-kred">
+                            <div class="panel-heading">
+                             <span class="dhrIcon-suitcase"></span> &nbsp;General Data
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-md-2">
+                                  <img ng-src="{{user.imgProf}}" class="kred-imgprofile" alt="{{user.name}}" />
+                                </div>
+                                <div class="col-md-8">
+                                  <p>
+                                    <b>ID:</b>{{user.idUser}} <br>
+                                    {{user.lastName}}, {{user.name}} <br>
+                                    <b>{{user.companyName}}</b> <br>
+                                    Since: {{user.creationDate}}<br>
+
+                                    <span ng-repeat="contact in user.contact">
+                                      <!-- Usando $filter -->
+                                       
+                                      <i class="fa dhrIcon-{{contact.idContactType | contactoIcono}}"></i> {{contact.contactText}} <br>
+                                    </span>
+                                  
+                                  </p>
+                                </div>
+
+                               
+                            </div>
+                            <div class="panel-footer">
+                                <a href="#" class="btn btn-default "> <i class="glyphicon glyphicon-arrow-up"></i> Update Info</a>
+                                <button class="btn btn-danger" ng-click="greeting()"> Greeting </button>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-md-4">
+                   <div class="panel panel-kred">
+                        <div class="panel-heading">
+                         <i class="glyphicon glyphicon-folder-open"></i>&nbsp;Documents
+                        </div>
+                        <div class="panel-body">
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">                                   
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                  <div class="item active">
+                                    <div style="width: 25%; float: left;">
+                                      <a href="" target="_blank"><img src="img/txtIco.png"></a>
+                                    </div>
+                                    <div style="width: 75%; float: left;">
+                                      <p>
+                                        Notes.txt
+                                      </p>
+                                      <p>
+                                        <a href="" class="btn btn-xs btn-danger "> <span class="dhrIcon-remove"></span> Delete</a>
+                                      </p>
+                                    </div>
+                                    
+                                  </div>
+
+                                  <div class="item" ng-repeat="doc in user.documents">
+                                    <div style="width: 25%; float: left;">
+                                      <a href="{{doc.url}}" target="_blank">
+                                        <!-- <img src="img/{{doc.typeDoc}}Ico.png"> -->
+                                        <img ng-src="img/{{doc.typeDoc}}Ico.png" />
+                                      </a>
+                                    </div>
+                                    <div style="width: 75%; float: left;">
+                                      <p>
+                                        {{doc.description}}
+                                      </p>
+                                      <p>
+                                        <button class="btn btn-danger" ng-click="docDelConf(doc.idDoc)"><i class="dhrIcon-remove" ></i> Delete
+                                        </button>
+                                      </p>
+                                    </div>
+                                    
+                                  </div>
+                                </div>                                    
+                              </div>
+                        </div>
+                        <div class="panel-footer">
+
+                            
+                            &nbsp;&nbsp;
+                            <a href="#myCarousel" data-slide="prev" ng-non-bindable class="btn btn-xs btn-default"> <i class="glyphicon glyphicon-chevron-left"></i></a>
+
+                            <a href="" class="btn btn-xs btn-success "> <i class="dhrIcon-plus-alt"></i> Add new</a>
+
+                            <a href="#myCarousel" data-slide="next" ng-non-bindable class="btn btn-xs btn-default"> <i class="glyphicon glyphicon-chevron-right"></i></a>
+                            <!---->
+                        </div>
+                    </div>
+            </div>
+            </div>
+            <!-- ROW END -->
+
+
+        </section>
+         <!-- SECTION END -->
+	
+	<!-- ############################   MODALES   ###########################  -->	
+
+	
+	
+</div><!-- FIN DE PAGE -->
+
+

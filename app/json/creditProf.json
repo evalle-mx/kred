@@ -1,0 +1,29 @@
+{
+	"creditScore": 780,
+	"scoreLabel": "Good",
+	"totalDebt":25057,
+	"debPayIncome":20.60,
+	"creditUsage":45,
+	"creditNewAlerts":5,
+	
+	"scoreGrades":[
+		{"lbScore":"A","typecolor":"success"},
+		{"lbScore":"C","typecolor":"warning"},
+		{"lbScore":"A","typecolor":"success"},
+		{"lbScore":"D","typecolor":"danger"},
+		{"lbScore":"B","typecolor":"primary"}
+		],
+	"analysis":[
+		{"text":"You've kept your total monthl payments affordable in relation to your income","type":"1"},
+		{"text":"You spend more than 14% of your incoe on payments to cover lifestyle debt, such as credit cards and loans","type":"0"},
+		{"text":"Your housing payment is affordable in relation to income","type":"1"},
+		{"text":"Your percentage of income you reserve for savings is less than 5%, it is recommended to increase this amount","type":"0"}
+		],
+	"creditScoreCalculation":[
+		{"name":"Payment History", "percentage":35,"rgb":"#7ac142"},
+		{"name":"Amounts Owed", "percentage":30,"rgb":"#db334e"},
+		{"name":"Length of Credit History", "percentage":15,"rgb":"#ff754c"},
+		{"name":"New Credit", "percentage":10,"rgb":"#00aeef"},
+		{"name":"Credit Mix", "percentage":10,"rgb":"#ffaa07"}
+	]
+}

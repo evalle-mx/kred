@@ -1,0 +1,45 @@
+<div ng-controller="ctrlRegistro as registration">
+
+    <h2>Registrarse en el sistema</h2>
+    <div class="alert alert-success dhr-home" ng-show="registration.success">
+		{{ registration.message }}
+	</div>
+	<div class="alert alert-warning dhr-home" ng-show="registration.warning">
+		{{ registration.message }}
+	</div>
+	
+	<div class="alert alert-danger dhr-home" ng-show="registration.error">
+		{{ registration.message }}
+	</div>
+	
+    <form name="registrationForm" novalidate class="well dhr-home" 
+          ng-submit="registration.submit(registrationForm.$valid)">
+       <div class="form-group">
+            <label>Correo electrónico</label>
+            <input type="email" name="username" class="form-control" placeholder="email@some.com"
+            	ng-model="registration.user.username" required  />
+            <div ng-messages="registrationForm.username.$error" ng-messages-include="views/messages.html"></div>
+        </div>
+        <div class="form-group">
+            <label>Contraseña</label>
+            <input type="password" name="password" class="form-control" 
+            placeholder="Escribe contraseña de entrada" ng-model="registration.user.password" required />
+            <div ng-messages="registrationForm.password.$error" ng-messages-include="views/messages.html"></div>
+        </div>
+        <div class="form-group">
+            <label>Confirma la contraseña</label>
+            <input type="password" name="confirmPassword" class="form-control" 
+                  placeholder="Re-escriba contraseña anterior" ng-model="registration.user.confirmPassword" 
+                   required compare-to="registration.user.password" />
+            <div ng-messages="registrationForm.confirmPassword.$error" ng-messages-include="views/messages.html"></div>
+        </div>
+        <div class="form-group">
+            <button type="submit" ng-hide="showIEbutton" class="btn btn-primary" id="btie">Enviar</button>            
+            <button type="button" class="btn btn-primary" onClick="location.href='#anyword'" 
+            	data-toggle="modal" data-target="#myModal" id="btnoie" ng-show="showIEbutton">Enviar</button>
+        </div>
+    </form> 
+    <div class="dhr-home">
+        Si ya está registrado, ingrese <a href="#/login">aquí</a>.
+    </div>
+ </div>

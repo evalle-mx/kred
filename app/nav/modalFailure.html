@@ -1,0 +1,81 @@
+	<!-- Modal Fatal -->
+	
+	<div class="modal fade" id="mdFatalMsg" role="dialog" data-backdrop="static" ng-controller="navigation">
+	    <div class="modal-dialog">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h4 class="modal-title" style="text-align:center">Error</h4>
+	        </div>
+	        <div class="modal-body" style="text-align:center">
+				<div class="errordothrpn" style="text-align:center">
+					An error occurred in the Application, contact your administrator.
+				</div>			
+	        </div>
+	        <div class="modal-footer">
+	          <a href="" class="btn btn-primary" ng-click="logout()" >OK</a>
+	        </div>
+	      </div>      
+	    </div>
+	  </div> <!-- end-Modal Fatal -->
+	
+	<!-- Error 1 -->
+	<div class="modal fade" id="mdError1Msg" role="dialog" data-backdrop="static">
+	    <div class="modal-dialog">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h4 class="modal-title" style="text-align:center">Error</h4>
+	        </div>
+	        <div class="modal-body" style="text-align:center">
+				<div class="warninggrand" style="text-align:center">
+					An error occurred while processing the request:<br>
+					<span id="detError"></span>
+				</div>			
+	        </div>
+	        <div class="modal-footer">
+	        	<button type="button" class="btn" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>      
+	    </div>
+	  </div>
+
+	<!-- Error 2 -->
+	<div class="modal fade" id="mdError2Msg" role="dialog" data-backdrop="static" ng-controller="navigation">
+	    <div class="modal-dialog">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <h4 class="modal-title" style="text-align:center">System error</h4>
+	        </div>
+	        <div class="modal-body" style="text-align:center">
+				<div class="warninggrand" style="text-align:center">
+					An error occurred while processing the request:<br>
+					<span id="detError2"></span>
+				</div>			
+	        </div>
+	        <div class="modal-footer">
+	        	<a href="" class="btn btn-primary" ng-click="logout()" >OK</a>
+	        </div>
+	      </div>      
+	    </div>
+	  </div>
+	
+	<!-- Info -->
+	<div class="modal fade" id="mdInfoMsg" role="dialog" data-backdrop="static" >
+	    <div class="modal-dialog">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h4 class="modal-title" style="text-align:center"><span id="titInfoModal">Important</span></h4>
+	        </div>
+	        <div class="modal-body" style="text-align:center">
+				<div class="warninggrand" style="text-align:center">
+					<span id="detInfo"></span>
+				</div>			
+	        </div>
+	        <div class="modal-footer">
+	        	<button type="button" class="btn" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>      
+	    </div>
+	  </div>

@@ -1,0 +1,51 @@
+{
+	"idUser": "7",
+	"email": "user1@kred.ca",
+	"idEmpresa": "1",
+	"idEstatus": "3",
+	"creationDate": "2019-11-06 14:15:00.295",
+	"name": "Ricardo",
+	"middleName:": "",
+	"lastName": "Mateus",
+	"age": "38",
+	"idTipoGenero": "1",
+	"idCompany": "987",
+	"companyName": "Bank of Montreal",
+	"imgProf": "/s3/common/img/avatar/p-generic7-M.jpg",
+	"contact": [{
+			"idContact": "10",
+			"idContactType": "11",
+			"contactText": "28503734"
+		},
+		{
+			"idContact": "11",
+			"idContactType": "10",
+			"contactText": "ricard-skype"
+		}
+	],
+	"documents": [{
+			"idDoc": "10",
+			"typeDoc":"pdf",
+			"url": "https://www.google.com.mx/",
+			"description": "Monthly April report"
+		},
+		{
+			"idDoc": "15",
+			"typeDoc":"xls",
+			"url": "https://jsonlint.com/",
+			"description": "Stadistics sales"
+		},
+		{
+			"idDoc": "17",
+			"typeDoc":"doc",
+			"url": "https://jsonlint.com/",
+			"description": "Motivation letter"
+		},
+		{
+			"idDoc": "21",
+			"typeDoc":"ppt",
+			"url": "https://jsonlint.com/",
+			"description": "Centennial template"
+		}
+	]
+}

@@ -1,0 +1,96 @@
+    <!-- https://mdbootstrap.com/docs/jquery/javascript/charts/#bar-chart -->
+    <div class="kred-page" ng-controller="credProfileCtrl" >
+
+        <script type="text/javascript" src="scripts/common/popper.min.js"></script>
+        <script type="text/javascript" src="scripts/common/mdb.min.js"></script>
+        <hr>
+        <div class="kred-rutaheader">
+            <b>You are in:</b>&nbsp;<a href="">Credit Profile</a>
+        </div>
+    
+    
+        <!-- ############################   CONTENIDO PRINCIPAL   ###########################  -->
+        <div class="kred-cunico">            
+    
+            <!-- %%%%%%%%  RENGLON UNO %%%%%%%% -->
+            <div class="row">
+                
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        In this section we offer a credit profile analysis based on the information obtained in our financial records.
+                    </div>
+                  </div>
+               
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel panel-default kred-credp" >
+                        <div class="panel-heading text-center">
+                            <b>Your Credit Profile</b>
+                        </div>
+                        <div class="panel-body text-center" >
+                            <h1>{{credProf.creditScore}}</h1>
+                            <span ng-repeat="grade in credProf.scoreGrades">
+                                <button class="btn btn-xs btn-{{grade.typecolor}}" >{{grade.lbScore}}</button>
+                            </span>
+
+                            <h3>{{credProf.scoreLabel}}</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="panel panel-default kred-credp" >
+                        <div class="panel-body " >
+                            <canvas id="lineChart" style="max-height: 240px;" ></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-default kred-credp" >
+                        <div class="panel-heading text-center">
+                            <b>Our analysis</b>
+                        </div>
+                        <div class="panel-body " >
+                            <div ng-repeat="anPoint in credProf.analysis">
+                                <i class="kred-success glyphicon glyphicon-ok-circle" ng-show="anPoint.type=='1'"></i>
+                                <i class="kred-danger glyphicon glyphicon-remove-circle" ng-show="anPoint.type=='0'"></i>
+                                &nbsp; {{anPoint.text}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div><!-- //row -->
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="panel panel-default kred-credp" >
+                        <div class="panel-heading text-center">
+                            <b>Credit score calculation</b>
+                        </div>
+                        <div class="panel-body text-center" >
+                            <canvas id="doughnutChart" style="max-width: 540px;"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                </div>
+            </div>
+    
+    
+           <br>
+    
+        </div> <!-- //End kred-cprincipal -->
+    
+       
+        <!-- ############################   MODALES   ###########################  -->
+
+        
+    
+        
+    </div><!-- FIN DE PAGE -->
+    

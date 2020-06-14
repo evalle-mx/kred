@@ -1,0 +1,50 @@
+{
+	"idUser": "7",
+	"email": "netto@kred.ca",
+	"idEmpresa": "1",
+	"idEstatus": "3",
+	"creationDate": "2019-12-01 14:15:00.295",
+	"name": "Ernesto",
+	"middleName:": "",
+	"lastName": "Valle",
+	"age": "38",
+	"idTipoGenero": "1",
+	"idCompany": "987",
+	"companyName": "Scotiabank Canada",
+	"imgProf": "/s3/common/img/avatar/angularGreen.png",
+	"contact": [{
+			"idContact": "1",
+			"idContactType": "13",
+			"contactText": "473 989 6775"
+		},
+		{
+			"idContact": "11",
+			"idContactType": "10",
+			"contactText": "evalle_skype"
+		},
+		{
+			"idContact": "2",
+			"idContactType": "6",
+			"contactText": "https://www.linkedin.com/in/ernesto-valle-villalobos-492248155/"
+		}
+	],
+	"documents": [{
+			"idDoc": "10",
+			"typeDoc":"doc",
+			"url": "https://www.facebook.com/",
+			"description": "Monthly April report"
+		},
+		{
+			"idDoc": "15",
+			"typeDoc":"pdf",
+			"url": "https://jsonlint.com/",
+			"description": "Stadistics sales"
+		},
+		{
+			"idDoc": "17",
+			"typeDoc":"pdf",
+			"url": "https://jsonlint.com/",
+			"description": "Motivation letter"
+		}
+	]
+}

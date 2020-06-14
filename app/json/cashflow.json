@@ -1,0 +1,30 @@
+[{
+	"utilies":15, 
+	"clothing":9, 
+	"travel":6, 
+	"groceries":18, 
+	"services":10, 
+	"business":30, 
+	"automotive":12,	
+	"transactions":[
+		{"date":"01/08/20", "account":"Jacks checking","description":"Power Company","category":"Utilies","amount":8.12},
+		{"date":"01/25/20", "account":"Anna’s checking","description":"Department Store","category":"Clothing","amount":9.76},
+		{"date":"02/11/20", "account":"Credit card","description":"Regional Airline","category":"Travel","amount":84.6},
+		{"date":"02/18/20", "account":"Anna’s checking","description":"Big Box Store","category":"Groceries","amount":103.47},
+		{"date":"02/21/20", "account":"Gas Card","description":"Gas Station","category":"Utilies","amount":45.96},
+		{"date":"02/28/20", "account":"Scotiabank Account","description":"Hotel Chain","category":"Services","amount":79.03},
+		{"date":"03/10/20", "account":"Anna’s checking","description":"Power Company","category":"Utilies","amount":10.14},
+		{"date":"03/15/20", "account":"Credit card","description":"Morgan Freeman","category":"Business","amount":243.94},
+		{"date":"03/18/20", "account":"Jacks checking","description":"Power Company","category":"Utilies","amount":58.55},
+		{"date":"04/01/20", "account":"Credit card","description":"Big Box Store","category":"Automotive","amount":74.25}
+	],
+	"expensesMonth":[
+		{"month":"Oct","quantity":3570},
+		{"month":"Nov","quantity":1970},
+		{"month":"Dec","quantity":9200},
+		{"month":"Jan","quantity":6970},
+		{"month":"Feb","quantity":8500},
+		{"month":"Mar","quantity":2100},
+		{"month":"Apr","quantity":3250}
+		]
+}]

@@ -1,0 +1,40 @@
+
+<div  ng-controller="recuperar" class="kred-login">
+	<h2>Password Reset</h2>
+
+	<div class="alert alert-danger dhr-home" ng-show="error">
+		There was a problem with information provided<b>{{prb}}</b>. 
+		<br>
+	</div>
+	 <div class="alert alert-success dhr-home" ng-show="showsuccess">
+		<h2>{{ message }}</h2>
+	</div>
+	<div class="alert alert-danger dhr-home" ng-show="showerror">
+		<h3>{{ message }}</h3>
+	</div>
+	<div class="alert alert-warning dhr-home" ng-show="showwarning">
+		<h2>{{ message }}</h2>
+	</div>
+		
+	<h4 ng-show="shsear">Type your email to search in our base and send you an email</h4>
+
+	<div class="well dhr-home" name="forma_recup" ng-show="shsear">
+		
+		<div class="form-group">
+			<label for="username">Email address:</label>
+			<input type="text"
+				class="form-control" id="username" name="username" placeholder="email@domain.com" ng-model="emailuser"/>
+		</div>
+		<button type="submit" class="btn btn-primary" id="btie" ng-click="searchem()">Search</button> 
+	</div>
+	<h3 ng-show="shrest">We have found information, <br>Please click to send the <b>Reset email</b> to your account</h3>
+	<div class="well dhr-home" ng-show="shrest">
+		
+		<div class="form-group">
+			<input type="text" readonly="readonly"
+				class="form-control" id="username-ro" ng-model="emailuser"/>
+		</div>
+        <button type="button" class="btn btn-primary" id="btnoie" ng-click="restablecer()">Send request</button>
+	</div>
+	
+</div>

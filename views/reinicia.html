@@ -1,0 +1,44 @@
+<div  ng-controller="reinicia">
+	<br><br>
+	<h2> Restablecimiento de contraseña. </h2>
+
+	<div class="alert alert-danger dhr-home" ng-show="error">
+		Existió un problema con la información proporcionada<b>{{prb}}</b>. 
+		<br>Verifique e intente nuevamente.
+	</div>
+	<div class="alert alert-success dhr-home" ng-show="showsuccess">
+			<h2>{{ message }}</h2>
+	</div>
+	<div class="alert alert-danger dhr-home" ng-show="showerror">
+		<h3>{{ message }}</h3>
+	</div>
+	<div class="alert alert-warning dhr-home" ng-show="showwarning">
+		<h2>{{ message }}</h2>
+	</div>
+	<h3>Ingrese su contraseña para realizar el cambio solicitado</h3>
+	
+	<div class="well dhr-home" >
+		<div class="form-group">
+			<label for="username">Correo Electrónico:</label>
+			<input type="text" readonly="readonly"
+				class="form-control" id="username-ro" ng-model="emailuser"/>
+		</div>
+		<div class="form-group">
+            <label>Ingrese nueva Contraseña</label>
+            <input type="password" name="password" class="form-control" 
+            placeholder="Escribe contraseña de entrada" ng-model="password" required />
+        </div>
+        <div class="form-group">
+            <label>Confirma la nueva contraseña</label>
+            <input type="password" name="confirmPassword" class="form-control" 
+                  placeholder="Re-escriba contraseña anterior" ng-model="confirmPassword" 
+                   required  />
+        </div> 
+        <button type="button" class="btn btn-primary" id="btnoie" ng-click="reiniciar()">Restablecer</button>
+	</div>
+	
+	<br>
+	<div class="dhr-home">
+		Si aún no tiene una cuenta <a href="#/registro">regístrese gratuitamente</a>.
+	</div>
+</div>

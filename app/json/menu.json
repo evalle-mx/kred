@@ -1,0 +1,24 @@
+ [
+ {
+ 	"etiqueta": "About",
+ 	"ruta": "#/about"
+ },
+ {
+ 	"etiqueta": "Account",
+ 	"elementos": [{
+ 		"etiqueta": "Password management",
+ 		"ruta": "#/vccn"
+ 	}, {
+ 		"etiqueta": "My Info",
+ 		"ruta": "#/myinfo"
+ 	}] 	
+ },
+ {
+ 	"etiqueta": "My Finances",
+ 	"ruta": "#/cashFlow"
+ },
+ {
+ 	"etiqueta": "Credit Profile",
+ 	"ruta": "#/credp"
+ }
+ ]
